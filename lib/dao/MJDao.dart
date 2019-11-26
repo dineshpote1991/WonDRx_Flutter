@@ -32,12 +32,4 @@ class MJDao{
     return patients;
   }
 
-  //Delete song
-  Future<int> deleteTodo(int id) async {
-    final db = await dbProvider.database;
-    var result =
-    await db.delete(dbProvider.testTABLE, where: 'id = ?', whereArgs: [id]);
-    return result;
-  }
-
 }
